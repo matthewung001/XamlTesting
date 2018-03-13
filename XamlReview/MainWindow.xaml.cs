@@ -24,5 +24,10 @@ namespace XamlReview
         {
             InitializeComponent();
         }
+
+        private void Button1_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("You clicked on the button");
+        }
     }
 }
