@@ -4,6 +4,11 @@
              xmlns:local="clr-namespace:XamlReview"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style x:Key="StyleOne">
+            <Setter Property="Control.Foreground" Value="Blue"/>
+        </Style>
+        <Style x:Key="StyleTwo">
+            <Setter Property="Control.Foreground" Value="Red"/>
+        </Style>
     </Application.Resources>
 </Application>
