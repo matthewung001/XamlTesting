@@ -91,6 +91,7 @@
             <Button Name="btn" Content="Change Value" FontSize="20" Click="Button_Click" Grid.Column="2" Grid.Row="0" Height="40" />
             <Button Name="hierarchyBtn" Content="Hierarchy Button" Click="hierarchyBtn_Click" Grid.Column="2" Grid.Row="0" Height="40" Width="40"/>
             <Button Name="collectionBtn" Content="Collection" Click="collectionBtn_Click" Height="40" Width="40"/>
+            <Button Name="incomeBtn" Content="Income" Click="incomeBtn_Click" Width="40" Height="40"/>
         </DockPanel>
         <Label Grid.Row="2" Grid.Column="0" Background="{StaticResource lblbgcolor}" Height="49" Name="lbl"/>
 

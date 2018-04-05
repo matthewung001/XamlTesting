@@ -51,3 +51,5 @@ C:\Users\Matthew\Documents\repos\XamlTesting\XamlReview\obj\Debug\HierarchyWindo
 C:\Users\Matthew\Documents\repos\XamlTesting\XamlReview\obj\Debug\HierarchyWindow.baml
 C:\Users\Matthew\Documents\repos\XamlTesting\XamlReview\obj\Debug\CollectionBinding\CollectionBinding.g.cs
 C:\Users\Matthew\Documents\repos\XamlTesting\XamlReview\obj\Debug\CollectionBinding\CollectionBinding.baml
+C:\Users\Matthew\Documents\repos\XamlTesting\XamlReview\obj\Debug\IncomeWindow\IncomeWindow.g.cs
+C:\Users\Matthew\Documents\repos\XamlTesting\XamlReview\obj\Debug\IncomeWindow\IncomeWindow.baml

@@ -89,6 +89,7 @@ namespace XamlReview
             car.Model = "N";
             car2.Model = "N";
 
+            /*
             if (car == car2)
             {
                 MessageBox.Show("The cars are equal");
@@ -96,7 +97,7 @@ namespace XamlReview
             else
             {
                 MessageBox.Show("The cars are not equal");
-            }
+            }*/
 
             // Test out classes A-D for polymorphism
             C c = new C();
@@ -110,6 +111,50 @@ namespace XamlReview
 
             B b = new B();
             b.DoWork();
+
+            // Check sorting on lists
+            List<Tuple<int, int>> values = new List<Tuple<int, int>>();
+
+            Random rnd = new Random();
+            // Add 10 random values
+            for(int i = 0; i < 10; i++)
+            {
+                values.Add(new Tuple<int, int>(rnd.Next() % 100, rnd.Next() % 100));
+            }
+
+            values.Distinct();
+
+            // Print all the values
+            PrintValues(values);
+
+            // Sort
+            values.Sort((val1, val2) =>
+            {
+                if (val1.Item1 > val2.Item1) return 1;
+                else if (val1.Item1 < val2.Item1) return -1;
+                else
+                {
+                    if (val1.Item2 < val2.Item2) return 1;
+                    else if (val1.Item2 > val2.Item2) return -1;
+                    else return 0;
+                }
+            });
+
+            Console.WriteLine("After sorting: ");
+            PrintValues(values);
+
+            // Reverse order
+            values = values.OrderBy(val => val.Item1).ThenBy(val => val.Item2).Reverse().ToList();
+            Console.WriteLine("Reverse the order: ");
+            PrintValues(values);
+        }
+
+        private void PrintValues(List<Tuple<int, int>> values)
+        {
+            foreach (Tuple<int, int> val in values)
+            {
+                Console.WriteLine("{0}, {1}", val.Item1, val.Item2);
+            }
         }
 
         /// <summary>
@@ -127,6 +172,13 @@ namespace XamlReview
         {
             CollectionBinding.CollectionBinding collectionBinding = new CollectionBinding.CollectionBinding();
             collectionBinding.ShowDialog();
+        }
+
+        private void incomeBtn_Click(object sender, RoutedEventArgs e)
+        {
+            // Create a new income window
+            IncomeWindow.IncomeWindow incomeWindow = new IncomeWindow.IncomeWindow();
+            incomeWindow.ShowDialog();
         }
 
         /*

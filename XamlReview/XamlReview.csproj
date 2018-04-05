@@ -72,6 +72,10 @@
     <Compile Include="HierarchyWindow.xaml.cs">
       <DependentUpon>HierarchyWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="IncomeWindow\IncomeWindow.xaml.cs">
+      <DependentUpon>IncomeWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="IncomeWindow\NetIncome.cs" />
     <Compile Include="RoundingOffConverter.cs" />
     <Compile Include="SortingExample.xaml.cs">
       <DependentUpon>SortingExample.xaml</DependentUpon>
@@ -86,6 +90,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="HierarchyWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="IncomeWindow\IncomeWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
