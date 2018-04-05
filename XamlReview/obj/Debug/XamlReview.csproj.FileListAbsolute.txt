@@ -44,3 +44,6 @@ C:\Users\Matthew\Documents\repos\XamlTesting\XamlReview\obj\Debug\XamlReview.exe
 C:\Users\Matthew\Documents\repos\XamlTesting\XamlReview\obj\Debug\XamlReview.pdb
 C:\Users\Matthew\Documents\repos\XamlTesting\XamlReview\obj\Debug\App.baml
 C:\Users\Matthew\Documents\repos\XamlTesting\XamlReview\obj\Debug\XamlReview.csprojResolveAssemblyReference.cache
+C:\Users\Matthew\Documents\repos\XamlTesting\XamlReview\obj\Debug\XamlReview.csproj.CoreCompileInputs.cache
+C:\Users\Matthew\Documents\repos\XamlTesting\XamlReview\obj\Debug\SortingExample.g.cs
+C:\Users\Matthew\Documents\repos\XamlTesting\XamlReview\obj\Debug\SortingExample.baml

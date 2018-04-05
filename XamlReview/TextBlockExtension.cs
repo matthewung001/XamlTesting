@@ -10,7 +10,7 @@ using System.Windows.Media;
 
 namespace XamlReview
 {
-    class TextBlockExtension
+    class TextBlockExtension : UserControl
     {
         // Create an attached property to the textbox in the WPF
         // The text box can only accept letters and symbols but no numbers
@@ -46,7 +46,36 @@ namespace XamlReview
                     }
                 };
             }
+        }
 
+
+
+
+        public bool StringProperty
+        {
+            get { return (bool)GetValue(StringPropertyProperty); }
+            set { SetValue(StringPropertyProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for StringProperty.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty StringPropertyProperty =
+            DependencyProperty.Register("StringProperty", typeof(bool), typeof(MainWindow), new PropertyMetadata(false, AllowOnlyString2));
+
+        private static void AllowOnlyString2(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            if (d is TextBox)
+            {
+                TextBox obj = d as TextBox;
+                obj.TextChanged += (s, arg) =>
+                {
+                    TextBox txt = s as TextBox;
+                    if (!Regex.IsMatch(txt.Text, "^[a-zA-Z]*$"))
+                    {
+                        obj.BorderBrush = Brushes.Red;
+                        MessageBox.Show("Only letters allowed! Don't make me tell you again!");
+                    }
+                };
+            }
         }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -42,13 +43,19 @@ namespace XamlReview
             set
             {
                 _isValidData = value;
-                PropertyChanged(this, new PropertyChangedEventArgs("IsValidData"));
+                NotifyProperyChanged();
             }
         }
         
         public event PropertyChangedEventHandler PropertyChanged;
 
-       
+        private void NotifyProperyChanged([CallerMemberName] String property = "")
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(property));
+            }
+        }
 
 
         private void Button1_Click(object sender, RoutedEventArgs e)
@@ -62,11 +69,47 @@ namespace XamlReview
 
             // Change the color
             //this.btn.SetResourceReference(BackgroundProperty, "lblbgcolor");
+            // Open the new window
+            SortingExample sortingExample = new SortingExample();
+            sortingExample.Show();
         }
 
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Thanks for clicking on me!");
+            // Determing if two cars are equal
+            // OVerriding the IEquatable interface
+            Car car = new Car();
+            Car car2 = new Car();
+            car2.Year = "2000";
+            car.Year = "2000";
+
+            car.Make = "S";
+            car2.Make = "S";
+
+            car.Model = "N";
+            car2.Model = "N";
+
+            if (car == car2)
+            {
+                MessageBox.Show("The cars are equal");
+            }
+            else
+            {
+                MessageBox.Show("The cars are not equal");
+            }
+
+            // Test out classes A-D for polymorphism
+            C c = new C();
+            c.DoWork();
+
+            A ac = (A)c;
+            ac.DoWork();
+
+            B bc = (B)c;
+            bc.DoWork();
+
+            B b = new B();
+            b.DoWork();
         }
 
         /*

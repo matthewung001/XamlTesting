@@ -79,8 +79,8 @@
         </Grid.Resources>
 
         <!--<Button Grid.Row="1"  Grid.Column="2">Click ME</Button>-->
-        
-        <Button x:Name="startButton" Template="{StaticResource RoundButtonTemplate}" Grid.Row="0" Grid.Column="0" >Start</Button>
+
+        <Button x:Name="startButton" Template="{StaticResource RoundButtonTemplate}" Grid.Row="0" Grid.Column="0" Content="Hello"/>
 
         <TextBox Grid.Row="0" Grid.Column="1" Name="textBox"  Height="30" local:TextBlockExtension.AllowOnlyString="True"/>
 
@@ -114,7 +114,7 @@
             </Grid.RowDefinitions>
 
             <TextBox Grid.Row="0" Grid.Column="1" Height="20" Name="txtBox"/>
-            <TextBox Grid.Row="1" Grid.Column="1" Height="20" Text="{Binding ElementName=txtBox, Path=Text, Converter={StaticResource MyRoundingOffConverter}}"/>
+            <TextBox Grid.Row="1" Grid.Column="1" Height="20" Text="{Binding ElementName=txtBox, Path=Text, Converter={StaticResource MyRoundingOffConverter}, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}"/>
         </Grid>
         
         <Label Content="I will change the color based on the checkbox" Name="label" Grid.Row="1" Grid.Column="2" VerticalAlignment="Top" Style="{Binding IsValidData, Converter={StaticResource MyBoolToStyleConverter}}"/>

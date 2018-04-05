@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Data;
 using System.Windows.Controls;
 using System.Windows;
+using System.ComponentModel;
 
 namespace XamlReview
 {
@@ -22,7 +23,7 @@ namespace XamlReview
 
         public object ConvertBack(object value, System.Type targetType, object parameter, System.Globalization.CultureInfo culture)
         {
-            throw new System.NotImplementedException();
+            return string.Format("{0} **", 0);
         }
     }
 
