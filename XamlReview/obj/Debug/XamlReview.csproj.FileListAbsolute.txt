@@ -47,3 +47,7 @@ C:\Users\Matthew\Documents\repos\XamlTesting\XamlReview\obj\Debug\XamlReview.csp
 C:\Users\Matthew\Documents\repos\XamlTesting\XamlReview\obj\Debug\XamlReview.csproj.CoreCompileInputs.cache
 C:\Users\Matthew\Documents\repos\XamlTesting\XamlReview\obj\Debug\SortingExample.g.cs
 C:\Users\Matthew\Documents\repos\XamlTesting\XamlReview\obj\Debug\SortingExample.baml
+C:\Users\Matthew\Documents\repos\XamlTesting\XamlReview\obj\Debug\HierarchyWindow.g.cs
+C:\Users\Matthew\Documents\repos\XamlTesting\XamlReview\obj\Debug\HierarchyWindow.baml
+C:\Users\Matthew\Documents\repos\XamlTesting\XamlReview\obj\Debug\CollectionBinding\CollectionBinding.g.cs
+C:\Users\Matthew\Documents\repos\XamlTesting\XamlReview\obj\Debug\CollectionBinding\CollectionBinding.baml

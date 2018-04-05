@@ -112,6 +112,23 @@ namespace XamlReview
             b.DoWork();
         }
 
+        /// <summary>
+        /// Open the heirarchy window
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void hierarchyBtn_Click(object sender, RoutedEventArgs e)
+        {
+            HierarchyWindow hierarchyWindow = new HierarchyWindow();
+            hierarchyWindow.ShowDialog();
+        }
+
+        private void collectionBtn_Click(object sender, RoutedEventArgs e)
+        {
+            CollectionBinding.CollectionBinding collectionBinding = new CollectionBinding.CollectionBinding();
+            collectionBinding.ShowDialog();
+        }
+
         /*
         private void ContextMenuClickEventHandler(object sender, RoutedEventArgs e)
         {

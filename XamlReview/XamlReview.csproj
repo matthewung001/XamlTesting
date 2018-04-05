@@ -59,13 +59,33 @@
       <DependentUpon>BirthdayYear.xaml</DependentUpon>
     </Compile>
     <Compile Include="Car.cs" />
+    <Compile Include="CollectionBinding\CollectionBinding.xaml.cs">
+      <DependentUpon>CollectionBinding.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CollectionBinding\People.cs" />
+    <Compile Include="CollectionBinding\Person.cs" />
     <Compile Include="Extension.cs" />
+    <Compile Include="HierarchyClasses\Division.cs" />
+    <Compile Include="HierarchyClasses\League.cs" />
+    <Compile Include="HierarchyClasses\LeagueList.cs" />
+    <Compile Include="HierarchyClasses\Team.cs" />
+    <Compile Include="HierarchyWindow.xaml.cs">
+      <DependentUpon>HierarchyWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RoundingOffConverter.cs" />
     <Compile Include="SortingExample.xaml.cs">
       <DependentUpon>SortingExample.xaml</DependentUpon>
     </Compile>
     <Compile Include="TextBlockExtension.cs" />
     <Page Include="BirthdayYear.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CollectionBinding\CollectionBinding.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HierarchyWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

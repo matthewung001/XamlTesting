@@ -86,7 +86,12 @@
 
         <local:BirthdayYear x:Name="birthdayYear"></local:BirthdayYear>
         <TextBlock Text="{Binding BirthYear, ElementName=birthdayYear}" Grid.Column="1" Grid.Row="0" Height="20" VerticalAlignment="Top"></TextBlock>
-        <Button Name="btn" Content="Change Value" FontSize="20" Click="Button_Click" Grid.Column="2" Grid.Row="0" Height="40" />
+
+        <DockPanel Grid.Row="0" Grid.Column="2">
+            <Button Name="btn" Content="Change Value" FontSize="20" Click="Button_Click" Grid.Column="2" Grid.Row="0" Height="40" />
+            <Button Name="hierarchyBtn" Content="Hierarchy Button" Click="hierarchyBtn_Click" Grid.Column="2" Grid.Row="0" Height="40" Width="40"/>
+            <Button Name="collectionBtn" Content="Collection" Click="collectionBtn_Click" Height="40" Width="40"/>
+        </DockPanel>
         <Label Grid.Row="2" Grid.Column="0" Background="{StaticResource lblbgcolor}" Height="49" Name="lbl"/>
 
         <!--
